@@ -29,7 +29,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## Otherwise, it calculates it and save in the cache via the setinv function.
 
 cacheSolve <- function(x, ...) {
-    m <- x$getinv()
+    inmat <- x$getinv()
     if(!is.null(inmat)) {
         message("getting cached data")
         return(inmat)
